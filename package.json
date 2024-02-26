@@ -1,0 +1,36 @@
+{
+  "name": "seeksoft-ats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "builder": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.awipl.seeksoft",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./seeksoft ats icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "installerIcon": "./seeksoft ats icon.ico",
+      "uninstallerIcon" : "./seeksoft ats icon.ico",
+      "uninstallDisplayName" : "seeksoft AOPL",
+      "license": "./license.md",
+      "createDesktopShortcut" : true,
+      "shortcutName" : "SEEKSOFT ATS", 
+      "allowToChangeInstallationDirectory": false
+    }
+  }
+}
